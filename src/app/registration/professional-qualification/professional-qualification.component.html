@@ -1,0 +1,130 @@
+<details>
+  <summary>Professional Qualifications</summary>
+  <div class="form__control">
+    <div class="application__type">
+      <label for="applicationType">Applicant Type*</label>
+      <div class="form__control">
+        <input type="radio" name="applicationType" id="fresher" value="Fresher" [(ngModel)]="applicationType" />
+        <label for="fresher">Fresher</label>
+        <input type="radio" name="applicationType" id="experienced" value="Experienced" [(ngModel)]="applicationType" />
+        <label for="experienced">Experienced</label>
+      </div>
+    </div>
+
+    <!-- Fresher Qualification  -->
+    
+    <div *ngIf="applicationType === 'Fresher'" class="fresher__qualification__container">
+      <div class="form__control">
+        <label for="technologies">Select All The Technologies You Are Familiar In</label><br />
+        <input type="checkbox" name="familiar_technologies" id="javascript" value="javascript" /><label
+          for="javascript">Javascript</label><br />
+        <input type="checkbox" name="familiar_technologies" id="angular js" value="Angular js" /><label
+          for="angular js">Angular Js</label><br />
+        <input type="checkbox" name="familiar_technologies" id="react" value="react" /><label
+          for="react">React</label><br />
+        <input type="checkbox" name="familiar_technologies" id="node js" value="node js" /><label for="node js">Node
+          Js</label><br />
+        <input type="checkbox" name="familiar_technologies" id="others" value="others" /><label
+          for="others">Others</label><br />
+        <label for="other_technology">If others, please mention</label><br />
+        <input type="text" name="familiar_technologies" id="other_technology" />
+      </div>
+
+      <div class="form__control">
+        <label>Have You Appeared For Any Test By Zeus in the past 12 months?*</label><br />
+        <input type="radio" name="isGivenTest" id="yes" value="yes" [(ngModel)]="fresherQualification.appliedForTest" />
+        <label for="yes">Yes</label>
+        <input type="radio" name="isGivenTest" id="no" value="no" [(ngModel)]="fresherQualification.appliedForTest"/>
+        <label for="no">No</label>
+      </div>
+
+      <div class="form__control">
+        <label>If Yes, which role did you apply for?</label><br />
+        <input type="text" name="roleAppliedFor" id="roleAppliedFor" [(ngModel)]="fresherQualification.roleAppliedFor"/>
+      </div>
+    </div>
+
+    <!-- Experience Qualification  -->
+
+    <div *ngIf="applicationType === 'Experienced'" class="experience__qualification__container">
+      <div class="form__control">
+        <label for="yearsOfExperience">Years of Experience*</label><br />
+        <input type="text" name="" id="yearsOfExperience"/>
+      </div>
+
+      <div class="form__control">
+        <label for="currentCTC">Current CTC* (In Rupees)</label><br />
+        <input type="text" name="" id="currentCTC" />
+      </div>
+
+      <div class="form__control">
+        <label for="expCTC">Expected CTC* (In Rupees)</label><br />
+        <input type="text" name="" id="expCTC" />
+      </div>
+
+      <div class="form__control">
+        <label for="technologies">Select All The Technologies You Expertise In*</label><br />
+        <input type="checkbox" name="familiar_technologies" id="javascript" value="javascript" /><label
+          for="javascript">Javascript</label><br />
+        <input type="checkbox" name="familiar_technologies" id="angular js" value="Angular js" /><label
+          for="angular js">Angular Js</label><br />
+        <input type="checkbox" name="familiar_technologies" id="react" value="react" /><label
+          for="react">React</label><br />
+        <input type="checkbox" name="familiar_technologies" id="node js" value="node js" /><label for="node js">Node
+          Js</label><br />
+        <input type="checkbox" name="familiar_technologies" id="others" value="others" /><label
+          for="others">Others</label><br />
+        <label for="other_technology">If others, please mention</label><br />
+        <input type="text" name="familiar_technologies" id="other_technology" />
+      </div>
+
+      <div class="form__control">
+        <label for="technologies">Select All The Technologies You Familiar In*</label><br />
+        <input type="checkbox" name="familiar_technologies" id="javascript" value="javascript" /><label
+          for="javascript">Javascript</label><br />
+        <input type="checkbox" name="familiar_technologies" id="angular js" value="Angular js" /><label
+          for="angular js">Angular Js</label><br />
+        <input type="checkbox" name="familiar_technologies" id="react" value="react" /><label
+          for="react">React</label><br />
+        <input type="checkbox" name="familiar_technologies" id="node js" value="node js" /><label for="node js">Node
+          Js</label><br />
+        <input type="checkbox" name="familiar_technologies" id="others" value="others" /><label
+          for="others">Others</label><br />
+        <label for="other_technology">If others, please mention</label><br />
+        <input type="text" name="familiar_technologies" id="other_technology" />
+      </div>
+
+      <div class="form__control">
+        <label>Are you currently on notice period?*</label><br />
+        <input type="radio" name="noticePeriod" id="noticePeriod" value="yes" /><label for="yes">Yes</label>
+        <input type="radio" name="noticePeriod" id="noticePeriod" value="no" /><label for="no">No</label>
+      </div>
+
+      <div class="form__control col-2">
+        <div>
+          <label for="noticePeriodEnd">If Yes, when will your notice period end?*</label><br />
+          <input type="date" id="noticePeriodEnd" />
+        </div>
+        <div>
+          <label for="noticePeriodTime">How long is your notice period?* (Mention in months)</label><br />
+          <select name="" id="noticePeriodTime">
+            <option value="2 months">2 months</option>
+            <option value="4 months">4 months</option>
+            <option value="6 months">6 months</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form__control">
+        <label>Have You Appeared For Any Test By Zeus in the past 12 months?*</label><br />
+        <input type="radio" name="appliedTest" id="yes" value="yes" /><label for="yes">Yes</label>
+        <input type="radio" name="appliedTest" id="no" value="no" /><label for="no">No</label>
+      </div>
+
+      <div class="form__control">
+        <label for="roleAppliedFor">If Yes, which role did you apply for?</label><br />
+        <input type="text" name="" id="roleAppliedFor" />
+      </div>
+    </div>
+  </div>
+</details>

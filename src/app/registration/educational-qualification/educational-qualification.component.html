@@ -1,0 +1,51 @@
+<details>
+    <summary>Educational Qualifications</summary><br>
+    <div class="qualification__information__container">
+        <div class="form__control">
+            <label for="percentage">Aggregate Percentage*</label><br>
+            <input type="text" name="percentage" id="percentage" [(ngModel)]="educationQualification.percentage">
+        </div>
+
+        <div class="form__control">
+            <label for="passingYear">Year Of Passing*</label><br>
+            <select name="passingYear" id="passingYear" [(ngModel)]="educationQualification.yearOfPassing">
+                <option *ngFor="let yearOfPassing of yearOfPassings">{{yearOfPassing}}</option>
+            </select>
+        </div>
+
+        <div class="form__control col-2">
+            <div>
+                <label for="qualification">Qualification*</label><br>
+                <select name="qualification" id="qualification" [(ngModel)]="educationQualification.qualification">
+                    <option *ngFor="let qualification of qualifications">{{qualification}}</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="stream">Stream*</label><br>
+                <select name="stream" id="stream" [(ngModel)]="educationQualification.stream">
+                    <option *ngFor="let stream of streams">{{stream}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form__control col-2">
+            <div>
+                <label for="college">College*</label><br>
+                <select name="college" id="college" [(ngModel)]="educationQualification.college">
+                   <option *ngFor="let college of colleges">{{college}}</option>
+                </select>
+            </div>
+            <div>
+                <label for="otherCollege">If others, please enter your college name</label><br>
+                <input type="text" name="otherCollege" id="otherCollege" [(ngModel)]="educationQualification.otherCollege">
+            </div>
+        </div>
+
+        <div class="form__control">
+            <label for="collegeLocation">Where is your college located?*</label><br>
+            <input type="text" name="collegeLocation" id="collegeLocation" [(ngModel)]="educationQualification.location">
+        </div>
+    </div>  
+</details>
+
